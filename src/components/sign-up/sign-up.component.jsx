@@ -30,11 +30,11 @@ class SignUp extends Component {
 
     try {
       const { user } = await createUserWithEmailAndPassword(auth, email, password)
-      console.log(user)
+      console.log(user, 'test')
 
       await createUserProfileDucument(user, { displayName })
 
-      this.state = {
+      this.setState = {
         displayName: '',
         email: '',
         password: '',
