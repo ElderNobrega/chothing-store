@@ -25,20 +25,20 @@ class App extends Component {
   componentDidMount() {
     const {setCurrentUser} = this.props
 
-    this.unsubscribeFromAuth = onAuthStateChanged(auth, async userAuth => {
-      if (userAuth) {
-        const userRef = await createUserProfileDucument(userAuth)
-        const docSnap = await getDoc(userRef)
-        console.log(docSnap.data(), 'This is a test 2')
+    // this.unsubscribeFromAuth = onAuthStateChanged(auth, async userAuth => {
+    //   if (userAuth) {
+    //     const userRef = await createUserProfileDucument(userAuth)
+    //     const docSnap = await getDoc(userRef)
+    //     console.log(docSnap.data(), 'This is a test 2')
 
-        setCurrentUser({
-          id: docSnap.id,
-          ...docSnap.data()
-        })
-      } else {
-        setCurrentUser(userAuth)
-      }
-    })
+    //     setCurrentUser({
+    //       id: docSnap.id,
+    //       ...docSnap.data()
+    //     })
+    //   } else {
+    //     setCurrentUser(userAuth)
+    //   }
+    // })
   }
 
   componentWillUnmount() {
