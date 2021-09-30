@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, getDoc, doc, setDoc, collection, writeBatch } from 'firebase/firestore'; // 
-import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import 'firebase/auth';
 
 const config = {
@@ -75,6 +75,15 @@ export const convertCollectionsSnapshotToMap = (collections) => {
     accumulator[collection.title.toLowerCase()] = collection
     return accumulator
   }, {})
+}
+
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = onAuthStateChanged(auth, userAuth => {
+      unsubscribe()
+      resolve(userAuth)
+    }, reject)
+  })
 }
 
 export const auth = getAuth();
