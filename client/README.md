@@ -15,26 +15,29 @@ It allows us to compile scss to css. It has a lot of qualities and life improvem
 ### Firebase:
 Using firebase cloud firestore as a database for the project. 
 
+### Stripe:
+Using Strip to handle payments, for now it is in test mode. Not handling any real payments and backends for it, YET :) 
+
 ### Redux: 
 As the app is growing I find that redux will help me to have more control of the states that I will be needing.
 Also, it will increase my knowledge with Redux
 
-### Logger Midleware
+### Logger Midleware:
 Using logger midleware for testing purposes
 
-### Reselect
+### Reselect:
 As we have a state being rerendered in every state updates, even though it is the same state, this is not what we want. This is where reselect comes in. 
 
-### Redux - thunk
+### Redux - thunk:
 Installed to handle async functions codes in our redux action
 
-### Redux Persist
+### Redux Persist:
 Installed Redux persist to keep state saved when refresh the page!!
 
-### Redux Saga: (thunk replaced)
+### Redux Saga: (thunk replaced):
 A library to handle asynchronous and inpure functions like fetching data and browser cache easier to manage, efficient to execute and better at handling failures. 
 
-### React Hooks
+### React Hooks:
 Replaced some class components into functional components so I could implement, test and practice React hooks
 
 
