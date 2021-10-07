@@ -42,7 +42,3 @@ Replaced some class components into functional components so I could implement, 
 
 ### Backend in Node.js, express, axios:
 create a backend server to handle stripe payments. using axios to fetch token from stripe.
-
-
-heroku login
-heroku create e-clothing-store --buildpack https://github.com/mars/create-react-app-buildpack.git
