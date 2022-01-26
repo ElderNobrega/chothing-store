@@ -1,4 +1,4 @@
-# chothing-store
+# chothing-store web app
 
 ## https://e-clothing-store-project.herokuapp.com/
 
